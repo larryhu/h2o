@@ -27,3 +27,19 @@ func Choice[T any](src []T) T {
 	r := rand.New(rand.NewSource(time.Now().UnixMicro()))
 	return src[r.Intn(length)]
 }
+
+// Divide a number into multiple numbers, and the sum is equal to the number.
+// like  count = s1 + s2 + s3 return [s1,s2,s3] .
+// count: target number.
+// n: number of splits.
+func NumberSplit(count, n int) []int {
+	r := rand.New(rand.NewSource(time.Now().UnixNano()))
+	newNum := count
+	var result []int
+	for i := 0; i < n-1; i++ {
+		a := r.Intn(newNum)
+		result = append(result, a)
+		newNum -= a
+	}
+	return append(result, newNum)
+}

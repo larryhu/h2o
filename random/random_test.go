@@ -21,3 +21,8 @@ func TestRandomChoice(t *testing.T) {
 	randomRune := Choice(runes)
 	t.Logf("randomRune %s", string(randomRune))
 }
+
+func TestRandomNum(t *testing.T) {
+	result := NumberSplit(15, 4)
+	t.Logf("%v", result)
+}
