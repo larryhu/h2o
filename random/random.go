@@ -5,6 +5,9 @@ import (
 	"time"
 )
 
+// DefaultLetters
+var DefaultLetters = []rune("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789")
+
 // Obtain data samples according to the original data and the specified length.
 // src original data.
 // n the specified length.

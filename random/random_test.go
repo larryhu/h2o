@@ -10,6 +10,9 @@ func TestRandomSample(t *testing.T) {
 	runes := []rune("0123abcd这里有中文한국어")
 	randomRunes := Sample(runes, 10)
 	t.Logf("randomRunes %s", string(randomRunes))
+
+	randomRunes = Sample(DefaultLetters, 10)
+	t.Logf("randomRunes %s", string(randomRunes))
 }
 
 func TestRandomChoice(t *testing.T) {
